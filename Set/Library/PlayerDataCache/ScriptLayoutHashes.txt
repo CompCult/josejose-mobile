@@ -163,3 +163,4 @@ f68a17b5975cc0ef8e0e0785667aa2eb Assembly-CSharp-firstpass.dll:.EasyTween
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SavWav
 de6e4f464f9c054d7af15ffa5b6e5f09 Assembly-CSharp.dll:.Register
 349e86c07694b51ab970aa3759fb4294 Assembly-CSharp-firstpass.dll:.ClickedWaveAnimation
+877198677311230a8c7edd967c5609bf Assembly-CSharp.dll:.RandomMove
