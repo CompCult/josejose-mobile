@@ -32,7 +32,7 @@ public class Splash : GenericScreen
 
 		loadingIcon.SetActive(true);
 
-		if (IsUpdated())
+		if (CheckConection())
 		{
 			LoadScene("Login");
 		}
@@ -43,7 +43,7 @@ public class Splash : GenericScreen
 		}
 	}
 
-	private bool IsUpdated()
+	private bool CheckConection()
 	{
 		WWW versionRequest = MiscAPI.RequestVersion();
 
@@ -52,21 +52,12 @@ public class Splash : GenericScreen
 
 		if (versionRequest.responseHeaders["STATUS"] == "HTTP/1.1 200 OK")
 		{
-			if (MiscAPI.GetVersion() == Response)
-			{
-				Debug.Log("Version Updated");
-				return true;
-			}
-			else
-			{
-				AlertsAPI.instance.makeAlert("Versão desatualizada!\nAcesse nossa página de aplicativo na Play Store e atualize seu Change Trees para a última versão.", "Entendi");
-				return false;
-			}
+			return true;
 		}
 		else 
 		{
 			Debug.Log("Error on version: " + Response);
-			AlertsAPI.instance.makeAlert("Falha ao obter sua versão!\nVerifique sua conexão e tente novamente em breve.", "OK");
+			AlertsAPI.instance.makeAlert("Problemas de conexão!\nVerifique sua conexão e tente novamente em breve.", "OK");
 			return false;
 		}
 	}

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public static class WebAPI
 {
-	private static string urlDev = "https://set-web-dev.herokuapp.com/api",
-	urlDefault = "https://set-web.herokuapp.com/api";
+	private static string urlDev = "http://jose-and-jose-dev.herokuapp.com/api",
+	urlDefault = "http://jose-and-jose.herokuapp.com/api";
 
 	private static string _url = urlDefault,
 	_pvtKey = "de7206872c37dcab45f6b4ceae174cedb4f5f5e7",

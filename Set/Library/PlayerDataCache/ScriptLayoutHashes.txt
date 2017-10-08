@@ -13,6 +13,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 8ae2800ffe11b8a3b4a558cadee1f173 Assembly-CSharp.dll:.Answers
+877198677311230a8c7edd967c5609bf Assembly-CSharp.dll:.RandomMove
 3757231c10897d743d7bfb1c61a9ba2c Assembly-CSharp.dll:.Home
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -163,4 +164,3 @@ f68a17b5975cc0ef8e0e0785667aa2eb Assembly-CSharp-firstpass.dll:.EasyTween
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SavWav
 de6e4f464f9c054d7af15ffa5b6e5f09 Assembly-CSharp.dll:.Register
 349e86c07694b51ab970aa3759fb4294 Assembly-CSharp-firstpass.dll:.ClickedWaveAnimation
-877198677311230a8c7edd967c5609bf Assembly-CSharp.dll:.RandomMove
