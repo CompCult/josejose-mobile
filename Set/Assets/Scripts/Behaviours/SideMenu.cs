@@ -11,7 +11,7 @@ public class SideMenu : MonoBehaviour
 	public void Start () 
 	{
 		nameField.text = UserManager.user.name;
-		xpField.text = UserManager.user.xp + " EXP";	
+		xpField.text = UserManager.user.xp + " TintaLuz";	
 	}
 
 	public void LoadScene(string name)
