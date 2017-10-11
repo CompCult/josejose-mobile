@@ -64,7 +64,7 @@ public class Ranking : GenericScreen
         		break;
 
         	cardName.text = user.name;
-        	cardXP.text = user.xp + " EXP";
+        	cardXP.text = user.xp + " TintaLuz";
         	cardPlace.text = place.ToString();
 
             Position = new Vector3(Position.x, Position.y, Position.z);
@@ -89,7 +89,7 @@ public class Ranking : GenericScreen
         		break;
         	
         	cardName.text = group.name;
-        	cardXP.text = group.points + " EXP";
+        	cardXP.text = group.points + " TintaLuz";
         	cardPlace.text = place.ToString();
 
             Position = new Vector3(Position.x, Position.y, Position.z);

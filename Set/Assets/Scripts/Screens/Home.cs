@@ -7,11 +7,15 @@ using System.Collections.Generic;
 public class Home : GenericScreen 
 {
 	public Text backNameField;
+	public Color loadToColor;
 
 	public void Start () 
 	{
 		AlertsAPI.instance.Init();
 		backScene = null;
+
+		if (!PlayerPrefs.HasKey("JoseJose-FirstTime-" + UserManager.user.id))
+			Initiate.Fade("Tutorial", loadToColor, 0.5f);
 
 		backNameField.text = UserManager.user.name;
 	}

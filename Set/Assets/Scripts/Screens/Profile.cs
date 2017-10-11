@@ -48,8 +48,8 @@ public class Profile : GenericScreen
 		
 		string name = nameField.text,
 		email = emailField.text,
-		cpf = cpfField.text,
-		registry = registryField.text,
+		cpf = "00000000",
+		registry = "000000000",
 		course = courseField.captionText.text,
 		institution = institutionField.captionText.text,
 		phone = phoneField.text;
@@ -103,10 +103,6 @@ public class Profile : GenericScreen
 			errorMessage = "Seu nome deve conter pelo menos 3 caracteres.";
 		if (!CheckEmail(email))
 			errorMessage = "Insira um e-mail válido.";
-		if (cpf.Length < 14)
-			errorMessage = "Insira um CPF válido.\nO formato correto é 11122233344.";
-		if (registry.Length < 9)
-			errorMessage = "Insira uma identificação válida.\nPor exemplo, uma matrícula tem formato 111222999.";
 		if (phone.Length < 14)
 			errorMessage = "Insira um número de telefone válido.\nInsira seu telefone com DDD.";
 

@@ -15,14 +15,6 @@ public class Splash : GenericScreen
 		SplashTime();
 	}
 
-	public void ContinueToLogin(bool DefinitiveContinue)
-	{
-		if (DefinitiveContinue)
-			PlayerPrefs.SetString("ChangeTrees-NoAlert", "1");
-
-		LoadScene("Login");
-	}
-
 	private void SplashTime () 
 	{
 		// Disables Android Status Bar
@@ -32,19 +24,13 @@ public class Splash : GenericScreen
 
 		loadingIcon.SetActive(true);
 
-		if (CheckConection())
-		{
-			LoadScene("Login");
-		}
-		else
-		{
-			loadingIcon.SetActive(false);
-			fruitIcon.SetActive(true);
-		}
+		StartCoroutine(CheckConnection());
 	}
 
-	private bool CheckConection()
+	private IEnumerator CheckConnection()
 	{
+		yield return new WaitForSeconds(3);
+
 		WWW versionRequest = MiscAPI.RequestVersion();
 
 		string Error = versionRequest.error,
@@ -52,14 +38,18 @@ public class Splash : GenericScreen
 
 		if (versionRequest.responseHeaders["STATUS"] == "HTTP/1.1 200 OK")
 		{
-			return true;
+			LoadScene("Login");
 		}
 		else 
 		{
-			Debug.Log("Error on version: " + Response);
+			Debug.Log("Error on check connection: " + Error);
 			AlertsAPI.instance.makeAlert("Problemas de conexão!\nVerifique sua conexão e tente novamente em breve.", "OK");
-			return false;
+			
+			loadingIcon.SetActive(false);
+			fruitIcon.SetActive(true);
 		}
+
+		yield return null;
 	}
 
 	public void OpenPlayStore()
