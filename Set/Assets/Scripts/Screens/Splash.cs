@@ -36,7 +36,7 @@ public class Splash : GenericScreen
 		string Error = versionRequest.error,
 		Response = versionRequest.text;
 
-		if (versionRequest.responseHeaders["STATUS"] == "HTTP/1.1 200 OK")
+		if (versionRequest.error == null)
 		{
 			LoadScene("Login");
 		}
@@ -54,6 +54,6 @@ public class Splash : GenericScreen
 
 	public void OpenPlayStore()
 	{
-		Application.OpenURL("https://play.google.com/store/apps/details?id=com.compcult.josejose");
+		Application.OpenURL("https://play.google.com/store/apps/details?id=net.compcult.josejose");
 	}
 }

@@ -66,7 +66,7 @@ public static class GroupAPI
 	public static WWW SendGroupMessage (string message, User author)
 	{
 		WWWForm emailForm = new WWWForm ();
-		emailForm.AddField ("subject", "[Change Trees] Mensagem do Grupo " + GroupManager.group.name);
+		emailForm.AddField ("subject", "[Jose & José] Mensagem do Grupo " + GroupManager.group.name);
 		emailForm.AddField ("body", message);
 		emailForm.AddField ("author", author.email);
 
